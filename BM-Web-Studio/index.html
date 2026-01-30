@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM Web Studio</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="description" content="Tworzę nowoczesne i estetyczne strony internetowe. HTML, CSS, web design.">
+<meta name="keywords" content="strony internetowe, HTML, CSS, web design">
+<meta name="author" content="Bartek">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+     html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background: linear-gradient(135deg, #222, #444);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 1000px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.half {
+    flex: 1;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #00aa77, #008866);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #00aa77;
+}
+
+.menu {
+    background-color: #222;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.menu a {
+    color: white;
+    margin: 0 20px;
+    padding: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #00aa77;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#uslugi .half {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+#uslugi .half:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+section {
+    transition: 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.hero {
+    background: linear-gradient(135deg, #222, #000);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 4px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.hero p {
+    font-size: 22px;         
+    opacity: 0.9;
+    margin-bottom: 14px;
+}
+
+.hero-tagline {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.hero p strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.8s ease;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+details {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: bold;
+    font-size: 18px;
+    list-style: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+details p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+section {
+    scroll-margin-top: 120px;
+}
+
+a:focus {
+    outline: 3px solid #00aa77;
+    outline-offset: 4px;
+}
+
+/* 📱 TELEFON */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .half {
+        flex: 1 1 100%;
+    }
+
+    .menu {
+        padding: 20px 10px;
+    }
+
+    .menu a {
+        display: inline-block;
+        margin: 8px 12px;
+        font-size: 15px;
+    }
+}
+
+.logo-effect {
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff 30%,
+        #00aaff 50%,
+        #ffffff 70%
+    );
+
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    animation: textShine 4s linear infinite; /* 🔥 TERAZ CIĄGLE DZIAŁA */
+   
+}
+
+@keyframes textShine {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+.menu-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-logo {
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .menu-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-logo {
+        height: 36px;
+    }
+}
+
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-logo {
+    height: 170px;      /* trochę mniejsze logo */
+    margin-bottom: -55px; /* prawie brak odstępu */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-logo {
+    height: 160px;
+    display: block;
+    margin: -10 auto -20px auto;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: logoFade 1.2s ease forwards;
+}
+
+@keyframes logoFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero-logo {
+        height: 110px;
+        margin-bottom: 6px;
+    }
+
+    .logo-effect {
+        font-size: 44px;
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .hero-tagline {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    section {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
+    .container {
+        margin: 0 auto;
+        gap: 15px;
+    }
+
+    .half {
+        margin: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <img src="B_1_-removebg-preview.png" alt="BM Web Studio logo" class="hero-logo">
+    <h1 class="logo-effect">BM Web Studio</h1>
+    <p>Mam na imię Bartosz, uczę się tworzyć nowoczesne strony internetowe</p>
+    <p class="hero-tagline">HTML • CSS • Web Design</p>
+    <a href="#kontakt" class="btn">Skontaktuj się</a>
+</header>
+ 
+<nav class="menu" aria-label="Główne menu">
+    <div class="menu-inner">
+        <div class="menu-links">
+            <a href="#o-mnie">O mnie</a>
+            <a href="#uslugi">Usługi</a>
+            <a href="#wspolpraca">Współpraca</a>
+            <a href="#faq">FAQ</a>
+            <a href="#cele">Cele</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </div>
+</nav>
+
+<section id="o-mnie" class="fade-in">
+    <h2>O mnie</h2>
+    <p>Mam 17 lat jestem uczniem technikum logistycznego i obecnie uczę się HTML oraz CSS.</p>
+</section>
+
+<section id="uslugi" class="fade-in">
+    <h2>Co mogę dla Ciebie zrobić</h2>
+
+    <div class="container">
+         <section class="half fade-in">
+            <h3>💻 Strony internetowe</h3>
+            <p>Tworzę nowoczesne, szybkie i estetyczne strony internetowe.</p>
+        </section>
+
+         <section class="half fade-in">
+            <h3>🎨 Design & UX</h3>
+            <p>Dbam o czytelny wygląd i dobre wrażenia użytkownika.</p>
+        </section>
+
+         <section class="half fade-in">
+            <h3>📈 Rozwój i nauka</h3>
+            <p>Stale rozwijam swoje umiejętności w HTML, CSS i web designie.</p>
+        </section>
+    </div>
+</section>
+
+<section id="dlaczego" class="fade-in">
+    <h2>Dlaczego warto ze mną współpracować?</h2>
+
+    <div class="container">
+        <section class="half">
+            <h3>🤝 Indywidualne podejście</h3>
+            <p>Każdą stronę tworzę pod konkretne potrzeby klienta.</p>
+        </section>
+
+        <section class="half">
+            <h3>✨ Nowoczesny wygląd</h3>
+            <p>Stawiam na czysty design i dobre wrażenia użytkownika.</p>
+        </section>
+
+        <section class="half">
+            <h3>🔥 Rozwój i zaangażowanie</h3>
+            <p>To moja pasja – stale się uczę i rozwijam swoje umiejętności.</p>
+        </section>
+    </div>
+</section>
+
+<section id="wspolpraca" class="fade-in">
+    <h2>Jak wygląda współpraca?</h2>
+
+    <div class="container">
+        <section class="half">
+            <h3>📝 1. Kontakt</h3>
+            <p>Omawiamy potrzeby, pomysł i cel strony internetowej.</p>
+        </section>
+
+        <section class="half">
+            <h3>🎨 2. Projekt</h3>
+            <p>Tworzę wygląd strony i przedstawiam do akceptacji.</p>
+        </section>
+
+        <section class="half">
+            <h3>🚀 3. Realizacja</h3>
+            <p>Buduję stronę, testuję ją i przekazuję gotowy projekt.</p>
+        </section>
+    </div>
+</section>
+
+<section id="faq" class="fade-in">
+    <h2>Najczęstsze pytania</h2>
+
+    <details>
+        <summary>Ile kosztuje strona internetowa?</summary>
+        <p>Cena zależy od złożoności projektu. Każdą wycenę ustalam indywidualnie.</p>
+    </details>
+
+    <details>
+        <summary>Ile trwa wykonanie strony?</summary>
+        <p>Prosta strona wizytówka to zwykle kilka dni.</p>
+    </details>
+
+    <details>
+        <summary>Czy strona będzie działać na telefonie?</summary>
+        <p>Tak – każda strona jest responsywna i dopasowana do urządzeń mobilnych.</p>
+    </details>
+
+    <details>
+        <summary>Czy mogę później edytować treść?</summary>
+        <p>Oczywiście. Strona jest prosta w edycji i zawsze możesz ją rozbudować.</p>
+    </details>
+</section>
+   <div class="container">
+    <section class="half fade-in" id="cele">
+        <h2>Moje cele na 2026 rok</h2>
+        <ul>
+            <li>Otworzyć biznes ze stron internetowych</li>
+            <li>Osiągnąć jak najlepsze wyniki w nauce</li>
+            <li>Osiągnąć wymarzoną formę</li>
+        </ul>
+    </section>
+     
+     <section class="half fade-in" id="kontakt">
+        <h2>Kontakt</h2>
+        <p>Telefon: 511 146 177</p>
+        <p>Email: bartek.mazur2008@interia.pl</p>
+     
+     <a href="mailto:bartek.mazur2008@interia.pl?subject=Współpraca&body=Dzień dobry,%0A%0APiszę w sprawie strony internetowej." class="btn">
+    Napisz do mnie
+</a>
+     </section>
+</div>
+
+<footer>
+   </p>© 2026 BM Web Studio</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".fade-in").forEach(el => {
+    observer.observe(el);
+});
+</script>
+
+</body>
